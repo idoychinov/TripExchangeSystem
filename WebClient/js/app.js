@@ -29,9 +29,9 @@ var app = angular.module('myApp', ['ngRoute', 'ngResource', 'ngCookies']).
                 controller: 'DriversController'
             })
             .when('/drivers/:id', {
-                templateUrl: 'views/partials/drivers-details.html',
-                controller: 'DriversDetailsController',
-                resolve: routeUserChecks.authenticated
+                template: '<div ng-include="content"></div>',//'views/partials/drivers-details.html',
+                controller: 'DriversDetailsController'//,
+                //resolve: routeUserChecks.authenticated
             })
             .when('/trips/:id', {
                 templateUrl: 'views/partials/trips-details.html',
